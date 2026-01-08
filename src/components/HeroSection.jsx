@@ -41,13 +41,20 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut", delay: 0.1 }}
-            className="mb-4 text-4xl font-[700] text-white md:text-5xl lg:leading-normal xl:text-6xl"
+            className="mb-4 text-4xl font-[700] text-white drop-shadow-[0_0_10px_rgba(49,130,206,0.8)] drop-shadow-[0_0_20px_rgba(49,130,206,0.6)] md:text-5xl 
+             lg:leading-normal 
+             xl:text-6xl"
           >
-            Hi, I&apos;m <span className="text-heading">Prabhulal</span> a{" "}
-            <span className="text-heading">passionate</span> Front-End
-            Developer.
+            Hi, I&apos;m{" "}
+            <span className="text-heading drop-shadow-[0_0_10px_rgba(49,130,206,0.8)]">
+              Prabhulal
+            </span>{" "}
+            a{" "}
+            <span className="text-heading drop-shadow-[0_0_10px_rgba(49,130,206,0.8)]">
+              passionate
+            </span>{" "}
+            Front-End Developer.
           </motion.h1>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,7 +90,7 @@ const HeroSection = () => {
             Stick around to see some of my work.
           </motion.p>
 
-          <div className="flex flex-col items-center gap-8 sm:gap-4 sm:flex-row ">
+          <div className="flex flex-col items-center gap-8 sm:flex-row sm:gap-4 ">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
