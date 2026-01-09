@@ -16,24 +16,24 @@ const CompaniesBar = ({ setDescriptionJob }) => {
     },
   ];
 
-  // Positions → 0% and 50% (your requirement)
+  // 0% and 50% spacing (as you wanted)
   const positions = ["0%", "50%"];
 
   return (
-    <div className="relative flex w-full lg:w-[360px] min-h-[300px]">
-      {/* Timeline */}
+    <div className="relative flex w-full lg:w-[350px] min-h-[260px]">
+      {/* ================= Timeline ================= */}
       <div className="relative w-10 flex justify-center">
         {/* Base line */}
         <div className="absolute top-0 bottom-0 w-[2px] bg-gray-700/40" />
 
-        {/* Animated progress line */}
+        {/* Progress line */}
         <motion.div
-          animate={{ height: activeIndex === 0 ? "20%" : "60%" }}
+          animate={{ height: activeIndex === 0 ? "50%" : "100%" }}
           transition={{ duration: 0.5 }}
           className="absolute top-0 w-[2px] bg-blue-500"
         />
 
-        {/* Timeline dots */}
+        {/* 🔵 Timeline dots (BOTH always blue) */}
         {companies.map((_, index) => {
           const isActive = index === activeIndex;
 
@@ -45,22 +45,25 @@ const CompaniesBar = ({ setDescriptionJob }) => {
             >
               <motion.div
                 animate={{
-                  scale: isActive ? 1.2 : 1,
-                  opacity: isActive ? 1 : 0.4,
+                  scale: isActive ? 1.25 : 1,
+                  opacity: 1,
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className={`h-4 w-4 rounded-full border-2 ${
-                  isActive
-                    ? "bg-blue-500 border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.7)]"
-                    : "bg-background border-gray-500"
-                }`}
+                className={`h-4 w-4 rounded-full border-2 
+                  bg-blue-500 border-blue-500
+                  ${
+                    isActive
+                      ? "shadow-[0_0_25px_rgba(59,130,246,0.9)]"
+                      : "shadow-[0_0_12px_rgba(59,130,246,0.6)]"
+                  }
+                `}
               />
             </div>
           );
         })}
       </div>
 
-      {/* Company Cards */}
+      {/* ================= Company Cards ================= */}
       <div className="relative flex-1">
         {companies.map((company, index) => {
           const isActive = index === activeIndex;
