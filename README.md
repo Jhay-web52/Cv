@@ -1,58 +1,44 @@
 🚀 Portfolio Website
 
-A modern and responsive portfolio website built to showcase my skills, projects, and professional experience as a frontend developer. The website focuses on clean design, smooth animations, and performance optimization to deliver a polished user experience across all devices.
+A modern, responsive portfolio website built to showcase my frontend development skills, projects, and professional experience. The website emphasizes clean UI design, smooth animations, and performance optimization to deliver a high-quality user experience across all devices.
 
-🔗 Live Demo: https://portfolio-aashish.vercel.app
+🔗 Live Demo: https://prabhulalportfolio.vercel.app/
 
 📌 Overview
 
-This portfolio project highlights my frontend development capabilities, featured projects, and contact information in a structured and visually engaging format. It is built using modern web technologies and follows best practices for maintainability, responsiveness, and performance.
+This portfolio project serves as a personal website to highlight my technical skills, selected projects, and contact information. It is built using modern frontend technologies and follows industry best practices for responsiveness, maintainability, and performance.
 
 ✨ Key Features
 
 📱 Fully responsive and mobile-first design
-
 🎬 Smooth and interactive animations using Framer Motion
-
-🧩 Clean and reusable React component architecture
-
+🧩 Reusable and well-structured React components
 ⚡ Optimized performance with Next.js
-
-📂 Dynamic project listing with a “Show More” feature
-
+📂 Dynamic project section with “Show More” functionality
 📩 Contact form integration using Formspree
+🎨 Clean and modern UI built with Tailwind CSS
 
-🎨 Modern UI styled with Tailwind CSS
-
-🛠️ Tech Stack
-
+🛠️ Tech Stac
 ⚛️ React.js – Component-based UI development
-
-🚀 Next.js – React framework for server-side rendering and performance optimization
-
-🎨 Tailwind CSS – Utility-first CSS framework for rapid and consistent styling
-
-🎞️ Framer Motion – Animation library for smooth transitions and interactions
-
+🚀 Next.js – React framework for optimized rendering and performance
+🎨 Tailwind CSS – Utility-first CSS framework for rapid UI development
+🎞️ Framer Motion – Animation library for smooth transitions
 📬 Formspree – Contact form handling
 
 🗂️ Project Structure
 
 📦 Components – Reusable UI components
-
-🧭 Pages / App Router – Application routing and layout
-
+🧭 Pages / App Router – Application routing and layouts
 🎨 Styles – Tailwind CSS configuration and global styles
-
-🖼️ Public Assets – Static images and resources
+🖼️ Public Assets – Images and static resources
 
 ⚙️ Installation & Setup
 
 Follow these steps to run the project locally:
 
 1️⃣ Clone the repository
-git clone https://github.com/aashish-dhiman/portfolio.git
-cd portfolio
+git clone https://github.com/Prabhulal0410/Prabhulal_Portfolio.git
+cd Prabhulal_Portfolio
 
 2️⃣ Install dependencies
 npm install
@@ -67,31 +53,24 @@ NEXT_PUBLIC_FORM_ID=your_formspree_form_id
 npm run dev
 
 5️⃣ Open in browser
-
-Navigate to:
-
 http://localhost:3000
 
 🌍 Deployment
 
-The project is deployed on Vercel, utilizing Next.js optimizations for fast builds and global content delivery.
+The project can be deployed using Vercel, which provides optimized builds and global content delivery for Next.js applications.
 
 🤝 Contributing
 
-Contributions and suggestions are always welcome!
+Contributions and improvements are welcome.
 
 🍴 Fork the repository
-
 🌿 Create a new branch (git checkout -b feature/your-feature)
-
 💾 Commit your changes (git commit -m "Add feature")
-
-⬆️ Push to the branch (git push origin feature/your-feature)
-
+⬆️ Push to the branch (git push origin feature/your-featur
 🔁 Open a pull request
 
 📬 Contact
 
-If you’d like to collaborate, discuss opportunities, or share feedback, feel free to reach out via the contact form available on the website.
+For collaboration, feedback, or opportunities, feel free to reach out via the contact form available on the website.
 
-✨ Thank you for reviewing my portfolio project!
+✨ Thank you for taking the time to review my portfolio project.
