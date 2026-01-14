@@ -1,74 +1,78 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const letter = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      ease: "easeOut",
-      duration: 0.6,
-    },
-  },
-};
+const messages = [
+  "Hello 👋",
+  "नमस्ते 🙏",
+  "Hola 👋",
+  "Bonjour 👋",
+  "PRABHULAL",
+];
 
 export default function PageLoader() {
-  const name = "PRABHULAL";
+  const [index, setIndex] = useState(0);
+  const [visible, setVisible] = useState(true);
+  const [hydrated, setHydrated] = useState(false);
+
+  // Mark hydration
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+
+  // Language cycle
+  useEffect(() => {
+    if (!hydrated) return;
+
+    if (index < messages.length - 1) {
+      const timer = setTimeout(() => setIndex(index + 1), 900);
+      return () => clearTimeout(timer);
+    } else {
+      const exitTimer = setTimeout(() => setVisible(false), 1200);
+      return () => clearTimeout(exitTimer);
+    }
+  }, [index, hydrated]);
+
+  if (!visible) return null;
 
   return (
-    <motion.div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-bgDark text-textWhite"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 0 }}
-      transition={{ delay: 2.8, duration: 1.2, ease: "easeInOut" }}
-    >
-      {/* Name Animation */}
-      <motion.div
-        className="flex text-4xl font-bold tracking-[0.3em]"
-        variants={container}
-        initial="hidden"
-        animate="visible"
-      >
-        {name.split("").map((char, index) => (
-          <motion.span key={index} variants={letter}>
-            {char}
-          </motion.span>
-        ))}
-      </motion.div>
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-bgDark text-textWhite">
+      <AnimatePresence mode="wait">
+        {/* STATIC TEXT — INSTANT, NO JS WAIT */}
+        {!hydrated && (
+          <motion.div
+            key="static"
+            className="text-3xl md:text-4xl font-semibold tracking-wide opacity-90"
+          >
+           Hey👋, glad you’re here 💫✨,
+          </motion.div>
+        )}
 
-      {/* Underline */}
-      <motion.div
-        className="mt-6 h-[2px] w-24 bg-textWhite/70 rounded-full"
-        initial={{ scaleX: 0 }}
-        animate={{ scaleX: 1 }}
-        transition={{
-          delay: 1.2,
-          duration: 1,
-          ease: "easeInOut",
-        }}
-        style={{ transformOrigin: "left" }}
-      />
+        {/* ANIMATED TEXT — AFTER JS LOAD */}
+        {hydrated && (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -14 }}
+            transition={{
+              duration: 0.45,
+              ease: [0.22, 1, 0.36, 1], // pro easing
+            }}
+            className="text-3xl md:text-4xl font-semibold tracking-wide"
+          >
+            {messages[index]}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Subtle glow */}
+      {/* Ambient glow (optional but classy) */}
       <motion.div
-        className="absolute h-32 w-32 rounded-full bg-textWhite/10 blur-3xl"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 2, repeat: Infinity }}
+        className="absolute h-40 w-40 rounded-full bg-textWhite/10 blur-3xl"
+        animate={{ scale: [1, 1.25, 1] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       />
-    </motion.div>
+    </div>
   );
 }
