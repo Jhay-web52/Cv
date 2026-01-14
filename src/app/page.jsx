@@ -1,3 +1,8 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import PageLoader from "@/components/PageLoader";
+
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import About from "@/components/About";
@@ -7,17 +12,28 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <main className="relative mx-auto max-w-screen-xl bg-bgDark text-textWhite">
-      <Navbar />
-      <main className="overflow-hidden px-3 md:px-4">
-        <HeroSection />
-        <About />
-        <Experience />
-        <Skills />
-        <Projects />
-        <Contact />
+    <>
+      {loading && <PageLoader />}
+
+      <main className="relative mx-auto max-w-screen-xl bg-bgDark text-textWhite">
+        <Navbar />
+        <main className="overflow-hidden px-3 md:px-4">
+          <HeroSection />
+          <About />
+          <Experience />
+          <Skills />
+          <Projects />
+          <Contact />
+        </main>
       </main>
-    </main>
+    </>
   );
 }
