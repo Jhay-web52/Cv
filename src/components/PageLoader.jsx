@@ -9,10 +9,7 @@ const messages = [
   "Hola 👋",
   "Ciao 👋",
   "Bonjour 👋",
-  "안녕하세요 👋",
   "Olá 👋",
-  "Привет 👋",
-  "PRABHULAL ⚡",
 ];
 
 export default function PageLoader() {
@@ -23,9 +20,13 @@ export default function PageLoader() {
   const [displayedText, setDisplayedText] = useState("");
   const [isTyping, setIsTyping] = useState(false);
 
-  // ✅ Hydration
+  // Hydration + remove CSS loader
   useEffect(() => {
     setHydrated(true);
+
+    // 🔥 REMOVE instant CSS loader
+    const el = document.getElementById("initial-loader");
+    if (el) el.remove();
   }, []);
 
   // Typing effect
@@ -54,7 +55,7 @@ export default function PageLoader() {
   useEffect(() => {
     if (!hydrated) return;
 
-    const total = 10000;
+    const total = 8000;
     const step = 50;
     const inc = (step / total) * 100;
 
@@ -84,29 +85,68 @@ export default function PageLoader() {
     return () => clearTimeout(t);
   }, [hydrated]);
 
-  // ✅ FINAL render condition
   if (!hydrated || !visible) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black">
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="text-4xl md:text-6xl font-bold text-white"
-        >
-          {displayedText}
-          {isTyping && (
-            <motion.span
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
-              className="inline-block w-1 h-[1em] bg-white ml-1"
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden">
+      {/* Gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-zinc-900 to-black" />
+
+      {/* Soft spotlight */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{ opacity: [0.15, 0.3, 0.15] }}
+        transition={{ duration: 4, repeat: Infinity }}
+        style={{
+          background:
+            "radial-gradient(circle at 50% 40%, rgba(255,255,255,0.15), transparent 60%)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center gap-10 px-4">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight"
+          >
+            {displayedText}
+            {isTyping && (
+              <motion.span
+                animate={{ opacity: [1, 0, 1] }}
+                transition={{ duration: 0.8, repeat: Infinity }}
+                className="inline-block w-1 h-[1em] bg-white ml-1 align-middle"
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Progress */}
+        <div className="w-full max-w-sm space-y-2">
+          <div className="flex justify-between text-xs text-white/50">
+            <span>Loading portfolio</span>
+            <span>{Math.round(progress)}%</span>
+          </div>
+
+          <div className="relative h-[4px] bg-white/10 overflow-hidden rounded-full">
+            <motion.div
+              className="absolute inset-y-0 left-0 bg-white"
+              style={{ width: `${progress}%` }}
             />
-          )}
-        </motion.div>
-      </AnimatePresence>
+            <motion.div
+              className="absolute inset-y-0 w-32 bg-gradient-to-r from-transparent via-white/40 to-transparent"
+              animate={{ x: ["-100%", "300%"] }}
+              transition={{ duration: 1.8, repeat: Infinity }}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
     </div>
   );
 }

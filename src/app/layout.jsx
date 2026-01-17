@@ -14,7 +14,7 @@ export const metadata = {
   title: "Portfolio | Prabhulal Raghwani",
   description: "Prabhulal Raghwani's portfolio site.",
   icons: {
-    icon: "/favicon.png", // <-- your favicon in public folder
+    icon: "/favicon.png",
   },
 };
 
@@ -25,6 +25,11 @@ export default function RootLayout({ children }) {
         className={montserrat.className}
         style={{ backgroundColor: "#121212" }}
       >
+        {/* 🔥 INSTANT CSS LOADER (NO JS REQUIRED) */}
+        <div id="initial-loader">
+          <div className="pulse"></div>
+        </div>
+
         <Analytics />
         <SpeedInsights />
         {children}
