@@ -24,8 +24,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#121212" }}>
-{/* 
-<!-- Add this to your RootLayout body --> */}
+
+{/* inintial loading effct using only css */}
 <div id="initial-loader">
   {/* <!-- Floating particles --> */}
   <div class="loader-particle"></div>
@@ -35,23 +35,29 @@ export default function RootLayout({ children }) {
   <div class="loader-particle"></div>
   <div class="loader-particle"></div>
 
-  <div class="loader-content">
+ <div class="loader-content">
     {/* <!-- Typing animation --> */}
     <div class="typing-container">
       <div class="typing-line">
-        <span class="typing-text typing-text-1">Welcome to Prabhulal Raghwani Portfolio ⚡</span>
+        <span class="typing-text typing-text-1">Welcome to Prabhulal's Portfolio ⚡</span>
       </div>
       <div class="typing-line">
-        <span class="typing-text typing-text-2">Front-End Developer & Designer 💻</span>
+        <span class="typing-text typing-text-2">Front-end Developer & Designer 💻</span>
       </div>
       <div class="typing-line">
-        <span class="typing-text typing-text-3">Crafting Beautiful Web Experiences ✨</span>
+        <span class="typing-text typing-text-3">Please Wait, Loading Your Experience ✨</span>
       </div>
       <div class="typing-line">
-        <span class="typing-text typing-text-4">Turning Ideas Into Reality 🚀</span>
+        <span class="typing-text typing-text-4">Preparing Something Special For You 🎨</span>
       </div>
       <div class="typing-line">
-        <span class="typing-text typing-text-5">Building The Future, One Line at a Time 🌟</span>
+        <span class="typing-text typing-text-5">Almost There, Stay Tuned 🚀</span>
+      </div>
+      <div class="typing-line">
+        <span class="typing-text typing-text-6">Thanks For Your Patience 💜</span>
+      </div>
+      <div class="typing-line">
+        <span class="typing-text typing-text-7">Get Ready For An Amazing Journey 🌟</span>
       </div>
     </div>
   </div>
