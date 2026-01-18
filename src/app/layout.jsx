@@ -23,9 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#121212" }}>
-        {/* inintial loading effct using only css */}
         <div id="initial-loader">
-          {/* <!-- Floating particles --> */}
           <div className="loader-particle"></div>
           <div className="loader-particle"></div>
           <div className="loader-particle"></div>
@@ -33,43 +31,28 @@ export default function RootLayout({ children }) {
           <div className="loader-particle"></div>
           <div className="loader-particle"></div>
 
-          <div class="loader-content">
-            {/* <!-- Typing animation --> */}
+          <div className="loader-content">
             <div className="typing-container">
               <div className="typing-line">
-                <span className="typing-text typing-text-1">
-                  Welcome to Prabhulal's Portfolio ⚡
-                </span>
+                <span className="typing-text typing-text-1">Welcome to Prabhulal Portfolio ⚡</span>
               </div>
               <div className="typing-line">
-                <span className="typing-text typing-text-2">
-                  Front-end Developer & Designer 💻
-                </span>
+                <span className="typing-text typing-text-2">Front-end Developer & Designer 💻</span>
               </div>
               <div className="typing-line">
-                <span className="typing-text typing-text-3">
-                  Please Wait, Loading Your Experience ✨
-                </span>
+                <span className="typing-text typing-text-3">Please Wait, Loading Your Experience ✨</span>
               </div>
               <div className="typing-line">
-                <span className="typing-text typing-text-4">
-                  Preparing Something Special For You 🎨
-                </span>
+                <span className="typing-text typing-text-4">Preparing Something Special For You 🎨</span>
               </div>
               <div className="typing-line">
-                <span className="typing-text typing-text-5">
-                  Almost There, Stay Tuned 🚀
-                </span>
+                <span className="typing-text typing-text-5">Almost There, Stay Tuned 🚀</span>
               </div>
               <div className="typing-line">
-                <span className="typing-text typing-text-6">
-                  Thanks For Your Patience 💜
-                </span>
+                <span className="typing-text typing-text-6">Thanks For Your Patience 💜</span>
               </div>
               <div className="typing-line">
-                <span className="typing-text typing-text-7">
-                  Get Ready For An Amazing Journey 🌟
-                </span>
+                <span className="typing-text typing-text-7">Get Ready For An Amazing Journey 🌟</span>
               </div>
             </div>
           </div>
