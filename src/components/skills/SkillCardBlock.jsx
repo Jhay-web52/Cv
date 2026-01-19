@@ -56,6 +56,9 @@ import Image from "next/image";
 // Rendered icon ---> React sees a component and renders it to the DOM, <IconComponent className="scale-[150%]" />
 
 
+// MySkills stores icon names as strings, the switch-case maps those strings to Devicon React components, and React renders the selected component as an SVG icon in the browser.
+
+
 const SkillCardBlock = ({ icon, name }) => {
   let IconComponent = null;
 
