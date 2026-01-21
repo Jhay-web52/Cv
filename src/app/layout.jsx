@@ -12,11 +12,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Portfolio | Prabhulal Raghwani",
-  description: "Prabhulal Raghwani's portfolio site.",
-  icons: {
-    icon: "/favicon.png",
-  },
+  title: "Portfolio | Joel Oguntade",
+  description: "Joel Oguntade's portfolio site.",
 };
 
 export default function RootLayout({ children }) {
@@ -34,7 +31,7 @@ export default function RootLayout({ children }) {
           <div className="loader-content">
             <div className="typing-container">
               <div className="typing-line">
-                <span className="typing-text typing-text-1">Welcome to Prabhulal Portfolio ⚡</span>
+                <span className="typing-text typing-text-1">Welcome to Joel's Portfolio ⚡</span>
               </div>
               <div className="typing-line">
                 <span className="typing-text typing-text-2">Front-end Developer & Designer 💻</span>

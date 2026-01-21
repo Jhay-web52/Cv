@@ -5,11 +5,10 @@ import { useEffect, useState } from "react";
 
 const messages = [
   "<Hello /> 👋",
-  "नमस्ते 🙏",
   "Welcome ✨",
   "Code & Create 💻",
   "Let's Build 🚀",
-  "Prabhulal ⚡",
+  "Joel ⚡",
 ];
 
 export default function PageLoader() {
@@ -24,8 +23,12 @@ export default function PageLoader() {
     setHydrated(true);
 
     // remove instant CSS loader from layout.jsx
-    const el = document.getElementById("initial-loader");
-    if (el) el.remove();
+    setTimeout(() => {
+      const el = document.getElementById("initial-loader");
+      if (el && el.parentNode) {
+        el.parentNode.removeChild(el);
+      }
+    }, 100);
   }, []);
 
   /* -------------------- Typing Effect -------------------- */

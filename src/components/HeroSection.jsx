@@ -5,7 +5,7 @@ import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import Image from "next/image";
-import linkdinimg from "@/assets/linkdinimg.jpeg";
+import picture from "@/assets/picture.jpeg";
 import { FaDownload, FaArrowRight } from "react-icons/fa";
 
 /* Floating animation (desktop only) */
@@ -101,9 +101,9 @@ export default function HeroSection() {
           className="flex-1 text-center lg:text-left"
         >
           <h1 className="mb-4 text-3xl font-extrabold text-white sm:text-4xl xl:text-6xl">
-            Hi, I’m{" "}
+            Hi, I'm{" "}
             <span className="text-heading drop-shadow-[0_0_25px_rgba(59,130,246,0.9)]">
-              Prabhulal
+              Joel Oguntade
             </span>
             <br />
             Frontend Developer
@@ -111,7 +111,7 @@ export default function HeroSection() {
 
           <TypeAnimation
             sequence={[
-              "Building premium UI with React & Next.js",
+              "Building premium UI with React & Vue.js",
               1200,
               "Crafting smooth, scalable frontend experiences",
               1200,
@@ -124,8 +124,9 @@ export default function HeroSection() {
           />
 
           <p className="mx-auto mt-4 max-w-xl text-textPara lg:mx-0">
-            I build modern, high-performance web interfaces with a strong focus
-            on motion, accessibility, and clean architecture.
+            I build modern, high-performance web interfaces with React, Vue.js, and
+            Next.js. With a strong focus on clean code, responsive design, and
+            exceptional user experience.
           </p>
 
           {/* ===== CTA BUTTONS ===== */}
@@ -152,7 +153,7 @@ export default function HeroSection() {
 
             {/* Download CV */}
             <motion.a
-              href="https://drive.google.com/file/d/1wRgaFmytWUjihBWk56ehBRhDMdr4abE3/view"
+              href="https://drive.google.com/uc?export=download&id=1PPL8MRWUGD4hb0AklVVUaDilpx1YSX5R"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.06, y: -3 }}
@@ -172,12 +173,12 @@ export default function HeroSection() {
           className="relative"
         >
           <Image
-            src={linkdinimg}
-            alt="Prabhulal"
+            src={picture}
+            alt="Joel Oguntade"
             width={320}
             height={320}
-            priority
             className="rounded-full object-cover shadow-[0_0_60px_rgba(59,130,246,0.7)] sm:w-[360px]"
+            priority
           />
         </motion.div>
       </div>

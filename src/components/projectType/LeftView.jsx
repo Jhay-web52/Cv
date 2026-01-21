@@ -94,14 +94,15 @@ const LeftView = ({ id, name, description, img, tech, source, demo }) => {
           target="_blank"
           className="mx-auto flex w-fit items-center justify-center lg:mx-0 lg:justify-end "
         >
-          <Image
-            width={500}
-            height={500}
-            src={img}
-            alt={name}
-            priority={true}
-            className="cursor-pointer rounded-md object-contain "
-          />
+          {img && (
+            <Image
+              width={500}
+              height={300}
+              src={img}
+              alt=""
+              className=" cursor-pointer rounded-md"
+            />
+          )}
         </a>
       </motion.div>
     </div>

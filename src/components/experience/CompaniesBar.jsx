@@ -7,12 +7,12 @@ const CompaniesBar = ({ setDescriptionJob }) => {
 
   const companies = [
     {
-      name: "LNV Digital Systems",
-      job: "LnvDigitalExperience",
+      name: "Jhayfx Trading Academy",
+      job: "JhayfxExperience",
     },
     {
-      name: "AD Digitech",
-      job: "ADDigitech",
+      name: "Altschool Africa",
+      job: "AltschoolExperience",
     },
   ];
 

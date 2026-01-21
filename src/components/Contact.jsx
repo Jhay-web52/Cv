@@ -77,7 +77,7 @@ const Contact = () => {
           </p>
           <div className="mt-6 flex flex-row gap-5">
             <a
-              href="https://www.linkedin.com/in/prabhulal-raghwani/"
+              href="https://www.linkedin.com/in/joel-oguntade"
               className="group relative transition-all duration-500 ease-in-out hover:-translate-y-[2px] "
               target="_blank"
             >
@@ -87,7 +87,7 @@ const Contact = () => {
               </span>
             </a>
             <a
-              href="https://github.com/Prabhulal0410"
+              href="https://github.com/Jhay-web52"
               className="group relative transition-all duration-500 ease-in-out hover:-translate-y-[2px] "
               target="_blank"
             >
@@ -96,19 +96,9 @@ const Contact = () => {
                 Github
               </span>
             </a>
-            <a
-              href="https://x.com/Prabhulal0410"
-              target="_blank"
-              className="group relative transition-all duration-500 ease-in-out hover:-translate-y-[2px] "
-            >
-              <FaXTwitter className="size-7" />
-              <span className="absolute left-[50%] top-[150%] w-fit translate-x-[-50%] translate-y-[-50%] px-2 text-xs text-textLight opacity-0 group-hover:opacity-100">
-                Twitter
-              </span>
-            </a>
 
             <a
-              href="mailto:prabhulal.raghwani410@gmail.com"
+              href="mailto:joeloguntade256@gmail.com"
               target="_blank"
               className="group relative transition-all duration-500 ease-in-out hover:-translate-y-[2px] "
             >
@@ -154,7 +144,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="block w-full rounded-lg border border-[#33353F] bg-[#18191E] p-2.5 text-sm text-gray-100 placeholder-[#9CA2A9]"
-                  placeholder="prabhulal.raghwani410@gmail.com"
+                  placeholder="joeloguntade256@gmail.com"
                 />
                 <ValidationError
                   prefix="Email"
@@ -220,7 +210,7 @@ const Contact = () => {
 
       <footer className="flex items-center text-center pb-6">
         <span className="mx-auto text-textPara">
-          © {new Date().getFullYear()} - made with ❤️ by Prabhulal Raghwani
+          © {new Date().getFullYear()} - made with ❤️ by Joel Oguntade
         </span>
       </footer>
     </section>

@@ -3,9 +3,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "@mui/icons-material";
-import about from "@/assets/about1.png";
-import namastedevIcon from "@/assets/namastedev.png";
-import { SiLeetcode } from "react-icons/si";
+import picture from "@/assets/picture.jpeg";
 
 const About = () => {
   const refHeading = useRef(null);
@@ -56,11 +54,11 @@ const About = () => {
           className="relative"
         >
           <Image
-            src={about}
+            src={picture}
             alt="About"
             width={300}
             height={400}
-            className="size-[300px] cursor-pointer rounded-full transition-all duration-300 ease-in-out hover:scale-[1.02] sm:size-[350px]"
+            className="rounded-full object-cover shadow-[0_0_60px_rgba(59,130,246,0.7)] sm:w-[360px] hover:scale-100"
             priority
           />
         </motion.div>
@@ -78,31 +76,27 @@ const About = () => {
           <p>
             I&apos;m{" "}
             <span className="font-semibold text-heading">
-              Prabhulal Raghwani
+              Joel Oguntade
             </span>
-            , a Frontend Developer with hands-on experience building modern,
-            responsive web applications. Currently working as a Frontend
-            Developer Trainee at LNV Digital, I specialize in developing
-            scalable UI components and ERP modules using{" "}
+            , a passionate Frontend Developer with a strong foundation in modern web technologies. I specialize in building responsive, user-centric interfaces using{" "}
             <span className="font-semibold text-heading">React.js</span>,{" "}
+            <span className="font-semibold text-heading">Vue.js</span>,{" "}
             <span className="font-semibold text-heading">Next.js</span>,{" "}
-            <span className="font-semibold text-heading">Tailwind CSS</span>,{" "}
-            <span className="font-semibold text-heading">HTML5</span>,{" "}
-            <span className="font-semibold text-heading">CSS3</span>, and{" "}
+            <span className="font-semibold text-heading">Nuxt.js</span>,{" "}
+            <span className="font-semibold text-heading">Tailwind CSS</span>, and{" "}
             <span className="font-semibold text-heading">
-              JavaScript (ES6+)
+              TypeScript
             </span>
-            , with a strong focus on clean code, performance, and user
-            experience.
+            , with a strong focus on clean code, performance optimization, and exceptional user experience.
           </p>
 
           <div className="mt-6 w-full sm:mt-0">
             <div className="w-full">
               <h5 className="mt-4 text-xl font-bold text-textWhite">
-                Education
+                Professional Experience
               </h5>
               <div className="">
-                <h5 className="text-lg font-medium">Mumbai University</h5>
+                <h5 className="text-lg font-medium">Jhayfx Trading Academy</h5>
                 <div className=" flex w-full items-start gap-1 sm:gap-2">
                   <ArrowRight className={" h-5 w-4 flex-none"} />
                   <div
@@ -110,92 +104,42 @@ const About = () => {
                   "
                   >
                     <p>
-                      Bachelor of Engineering (BE) – Mechanical Engineering{" "}
-                      <br />
-                      <small>2019 - 2021</small>
+                      Web Developer <br />
+                      <small>2024 - 2025</small>
                     </p>
-                    <span>GPA: 8.03/10.00</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mt-4 w-full">
               <h5 className="mb-0.5 mt-2 text-xl font-bold text-textWhite">
-                Certifications
+                Skills
               </h5>
               <div className="space-y-1.5">
                 <div className="flex items-start gap-1 sm:gap-2">
                   <ArrowRight className="mt-0.5 h-5 w-4 flex-none text-blue-400" />
                   <div className="text-sm text-gray-400">
-                    <a
-                      href="https://www.coursera.org/account/accomplishments/professional-cert/CZ7WA8C5E4G2"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-heading transition-colors hover:underline"
-                    >
-                      Meta Front-End Developer{" "}
-                    </a>
-                    - Professional certification from Meta
+                    <span className="font-bold text-heading">Frontend Frameworks: </span>React.js, Vue.js, Next.js, Nuxt.js
                   </div>
                 </div>
                 <div className="flex items-start gap-1 sm:gap-2">
                   <ArrowRight className="mt-0.5 h-5 w-4 flex-none text-blue-400" />
                   <div className="text-sm text-gray-400">
-                    <a
-                      href="https://drive.google.com/file/d/1An7CK6iMx-pfUWmkBo7842PdzqtCTnWm/view?usp=sharing"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-heading transition-colors hover:underline"
-                    >
-                      Namaste React Course{" "}
-                    </a>
-                    - Advanced React.js concepts and best practices from
-                    NamasteDev.com
+                    <span className="font-bold text-heading">Styling: </span>Tailwind CSS, CSS3, Responsive Design
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="mt-6 w-full">
-              <h5 className="text-xl font-bold text-textWhite">
-                Coding Profiles
-              </h5>
-
-              <div className="mt-3 flex items-center gap-3">
-                {/* LeetCode */}
-                <a
-                  href="https://leetcode.com/u/PrabhulalRaghwani/"
-                  target="_blank"
-                  title="Leetcode"
-                  className="flex items-center gap-2 rounded-md border border-orange-500/30 
-                 bg-gradient-to-r from-[#1f1f1f] to-[#2a2a2a]
-                 px-3 py-2 text-sm font-medium text-orange-400
-                 transition-all duration-200 ease-in-out
-                 hover:border-orange-400 hover:text-orange-300 hover:shadow-md hover:shadow-orange-500/20"
-                >
-                  <SiLeetcode className="size-6" />
-                  Leetcode
-                </a>
-
-                {/* NamasteDev */}
-                <a
-                  href="https://namastedev.com/prabhulal.raghwani410"
-                  target="_blank"
-                  title="NamasteDev"
-                  className="flex items-center gap-2 rounded-md border border-emerald-500/30
-                 bg-gradient-to-r from-[#0f2f23] to-[#134235]
-                 px-3 py-2 text-sm font-medium text-emerald-400
-                 transition-all duration-200 ease-in-out
-                 hover:border-emerald-400 hover:text-emerald-300 hover:shadow-md hover:shadow-emerald-500/20"
-                >
-                  <Image
-                    src={namastedevIcon}
-                    alt="NamasteDev"
-                    width={40}
-                    height={40}
-                    className="size-6 object-cover"
-                  />
-                  NamasteDev
-                </a>
+                <div className="flex items-start gap-1 sm:gap-2">
+                  <ArrowRight className="mt-0.5 h-5 w-4 flex-none text-blue-400" />
+                  <div className="text-sm text-gray-400">
+                    <span className="font-bold text-heading">Languages: </span>JavaScript, TypeScript, HTML5
+                  </div>
+                </div>
+                <div className="flex items-start gap-1 sm:gap-2">
+                  <ArrowRight className="mt-0.5 h-5 w-4 flex-none text-blue-400" />
+                  <div className="text-sm text-gray-400">
+                    <span className="font-bold text-heading">Tools & Version Control: </span>Git, GitHub, Figma
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,3 @@
-
 export const MySkills = [
   {
     title: "Programming Languages",
@@ -7,52 +6,10 @@ export const MySkills = [
         name: "JavaScript",
         icon: "JavascriptOriginal",
       },
-      // {
-      //   name: "TypeScript",
-      //   icon: "TypescriptOriginal",
-      // },
-      // {
-      //   name: "Dart",
-      //   icon: "DartOriginal",
-      // },
-      // {
-      //   name: "C",
-      //   icon: "COriginal",
-      // },
-      // {
-      //   name: "C++",
-      //   icon: "CplusplusOriginal",
-      // },
-    ],
-    index: 1,
-  },
-  {
-    title: "Web/App Technologies",
-    skills: [
       {
-        name: "Next.js",
-        icon: "NextjsOriginal",
+        name: "TypeScript",
+        icon: "TypescriptOriginal",
       },
-      {
-        name: "React.js",
-        icon: "ReactOriginal",
-      },
-      // {
-      //   name: "Flutter",
-      //   icon: "FlutterOriginal",
-      // },
-      {
-        name: "Firebase",
-        icon: "FirebaseOriginal",
-      },
-      // {
-      //   name: "Node.js",
-      //   icon: "NodejsOriginal",
-      // },
-      // {
-      //   name: "Express.js",
-      //   icon: "ExpressOriginal",
-      // },
       {
         name: "HTML",
         icon: "Html5Original",
@@ -61,51 +18,38 @@ export const MySkills = [
         name: "CSS",
         icon: "Css3Original",
       },
+    ],
+    index: 1,
+  },
+  {
+    title: "Frameworks & Libraries",
+    skills: [
+      {
+        name: "React.js",
+        icon: "ReactOriginal",
+      },
+      {
+        name: "Next.js",
+        icon: "NextjsOriginal",
+      },
+      {
+        name: "Vue.js",
+        icon: "VueOriginal",
+      },
+      {
+        name: "Nuxt.js",
+        icon: "NuxtOriginal",
+      },
       {
         name: "Tailwind CSS",
         icon: "TailwindcssOriginal",
       },
-      {
-        name: "Bootstrap",
-        icon: "BootstrapOriginal",
-      },
-      {
-        name: "Shadcn UI",
-        icon: "ShadcnOriginal",
-      },
-      {
-        name: "Material UI",
-        icon: "MaterialuiOriginal",
-      },
-      {
-        name: "Redux",
-        icon: "ReduxOriginal",
-      },
-      // {
-      //   name: "React Query",
-      //   icon: null,
-      // },
     ],
     index: 2,
   },
 
-  // {
-  //   title: "Databases",
-  //   skills: [
-  //     {
-  //       name: "MongoDB",
-  //       icon: "MongodbOriginal",
-  //     },
-  //     {
-  //       name: "MySQL",
-  //       icon: "MysqlOriginal",
-  //     },
-  //   ],
-  //   index: 3,
-  // },
-
   {
-    title: "Tools",
+    title: "Tools & Version Control",
     skills: [
       {
         name: "Git",
@@ -116,38 +60,14 @@ export const MySkills = [
         icon: "GithubOriginal",
       },
       {
-      name: "Figma",         
-      icon: "FigmaOriginal",
-    },
-      // {
-      //   name: "Prisma",
-      //   icon: "PrismaOriginal",
-      // },
+        name: "Figma",
+        icon: "FigmaOriginal",
+      },
       {
         name: "Postman",
         icon: "PostmanOriginal",
       },
     ],
-    index: 5,
+    index: 3,
   },
-
-  // {
-  //   title: "Coursework",
-  //   skills: [
-  //     {
-  //       name: "Data Structures and Algorithms",
-  //       icon: null,
-  //     },
-  //     {
-  //       name: "Object Oriented Programming",
-  //       icon: null,
-  //     },
-
-  //     {
-  //       name: "Operating Systems",
-  //       icon: null,
-  //     },
-  //   ],
-  //   index: 6,
-  // },
 ];

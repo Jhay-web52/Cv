@@ -53,11 +53,11 @@ const Navbar = () => {
           className="min-w-[150px] cursor-pointer text-lg font-[600] tracking-wide sm:text-xl sm:font-[800]"
         >
           <span className="sm:hidden">
-            @Prabhulal{" "}
+            @Joel{" "}
             <span className="animate-wave inline-block origin-[70%_70%]">👋</span>
           </span>
           <span className="hidden sm:block">
-            @Prabhulal Raghwani{" "}
+            @Joel Oguntade{" "}
             <span className="animate-wave inline-block origin-[70%_70%]">👋</span>
           </span>
         </ScrollLink>
@@ -142,28 +142,22 @@ const Navbar = () => {
         {/* SOCIAL ICONS */}
         <div className="hidden items-center gap-3 text-[22px] lg:flex">
           <a
-            href="https://www.linkedin.com/in/prabhulal-raghwani/"
+            href="https://www.linkedin.com/in/joel-oguntade"
             target="_blank"
             className="transition hover:-translate-y-1 hover:text-blue-400"
           >
             <BsLinkedin />
           </a>
           <a
-            href="https://github.com/Prabhulal0410"
+            href="https://github.com/Jhay-web52"
             target="_blank"
             className="transition hover:-translate-y-1 hover:text-blue-400"
           >
             <BsGithub />
           </a>
+        
           <a
-            href="https://x.com/Prabhulal0410"
-            target="_blank"
-            className="transition hover:-translate-y-1 hover:text-blue-400"
-          >
-            <FaXTwitter />
-          </a>
-          <a
-            href="mailto:prabhulal.raghwani410@gmail.com"
+            href="mailto:joeloguntade256@gmail.com"
             target="_blank"
             className="transition hover:-translate-y-1 hover:text-blue-400"
           >
